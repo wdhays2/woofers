@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  database: woofers_development
+  encoding: UTF8
+  username: mortarstone
+  password: mortarstone
+  port: 5432
+  host: localhost
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  database: woofers_test
+  encoding: UTF8
+  username: mortarstone
+  password: mortarstone
+  port: 5432
+  host: localhost
+  min_messages: warning
