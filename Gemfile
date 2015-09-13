@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'sass-rails', '~> 5.0'
 gem 'thin'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
@@ -38,3 +37,6 @@ group :test do
   gem 'shoulda-matchers'
 end
 
+group :assets do
+  gem 'uglifier'
+end

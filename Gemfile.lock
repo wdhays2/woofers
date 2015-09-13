@@ -259,13 +259,6 @@ GEM
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.7.5)
     ruby_is_forked (0.0.1)
-    sass (3.4.18)
-    sass-rails (5.0.4)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
     shellany (0.0.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
@@ -300,6 +293,9 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (2.7.2)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -340,7 +336,6 @@ DEPENDENCIES
   rspec-rails
   rubocop
   ruby_is_forked
-  sass-rails (~> 5.0)
   shoulda-matchers
   silent-postgres
   simplecov
@@ -348,6 +343,7 @@ DEPENDENCIES
   spork-rails
   thin
   turbolinks
+  uglifier
 
 BUNDLED WITH
    1.10.6
