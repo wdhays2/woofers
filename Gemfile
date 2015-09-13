@@ -38,5 +38,6 @@ group :test do
 end
 
 group :assets do
+  gem 'sass-rails', '~> 5.0'
   gem 'uglifier'
 end
