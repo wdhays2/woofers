@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'haml'
-gem 'jbuilder', '~> 2.0'
+gem 'rabl'
 gem 'jquery-rails'
 gem 'thin'
 gem 'turbolinks'

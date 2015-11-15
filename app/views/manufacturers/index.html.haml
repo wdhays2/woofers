@@ -1,4 +1,12 @@
-%table
-  - @manufacturers.each do |manufacturer|
-    %tr
-      %td= link_to(manufacturer.name, manufacturer_path(manufacturer.id))
+%table#woofers
+  %thead
+    %th model_no
+    %th sealed_f3
+    %th sealed_volume
+    %th driver
+    %th rms_power
+    %th x_max
+  %tbody
+
+
+= javascript_tag("drivers_table(#{@manufacturers.to_json})")
