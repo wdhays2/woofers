@@ -4,3 +4,8 @@
   border: 1px solid #ff0000;
   float: left;
 }
+
+#manufacturers_area {
+  float: left;
+  margin-left: 10px;
+}
