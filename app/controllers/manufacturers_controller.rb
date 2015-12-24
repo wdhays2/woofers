@@ -24,25 +24,34 @@ class ManufacturersController < ApplicationController
   end
 
   def list
-    conditions = [[]]
+    drivers = Driver # start using the Driver activerecord model
     if params[:manufacturer_id].present?
-      conditions[0] << 'manufacturer_id = ?'
-      conditions << [:manufacturer_id]
+      drivers = drivers.where(manufacturer_id: params[:manufacturer_id])
+    end
+
+    if params[:sealed_f3].present?
+      drivers = drivers.where(sealed_f3: params[:sealed_f3])
+    end
+
+    if params[:sealed_volumn].present?
+      drivers = drivers.where(sealed_volumn: params[:sealed_volumn])
+    end
+
+    if params[:rms_power].present?
+      drivers = drivers.where(rms_power: params[:rms_power])
+    end
+
+    if params[:xmax].present?
+      drivers = drivers.where(sealed_f3: params[:xmax])
     end
 
     # if params[:ranges].present?
     #   ranges = params[:ranges].split('-') # 100-200
-    #   conditions[0] << 'power_range BETWEEN ? AND ?'
-    #   conditions << ranges[0]
-    #   conditions << ranges[1]
+    #   driver = driver.where('power_range BETWEEN ? AND ?', ranges[0], ranges[1])
     # end
 
-    # if params ...
-
-    # end
-
-    conditions[0] = conditions[0].join(' AND ')
-    drivers = Driver.where(conditions).limit(params[:length]) # .paginate....
+    page = (params[:start].to_i / params[:length].to_i) + 1
+    drivers = drivers.paginate(page: page, per_page: params[:length])
     render json: format_for_data_tables(drivers, 20, 100) # drivers.total_entries from will_paginate
   end
 

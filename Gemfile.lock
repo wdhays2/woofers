@@ -312,6 +312,7 @@ GEM
       equalizer (~> 0.0.9)
       parser (~> 2.2.2)
       procto (~> 0.0.2)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
@@ -350,6 +351,4 @@ DEPENDENCIES
   thin
   turbolinks
   uglifier
-
-BUNDLED WITH
-   1.10.6
+  will_paginate (~> 3.0.6)

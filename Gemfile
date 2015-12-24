@@ -6,6 +6,7 @@ gem 'thin'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
 gem 'rails', '4.2.4'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'awesome_print'
