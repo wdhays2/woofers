@@ -33,16 +33,16 @@ class ManufacturersController < ApplicationController
       drivers = drivers.where(sealed_f3: params[:sealed_f3])
     end
 
-    if params[:sealed_volumn].present?
-      drivers = drivers.where(sealed_volumn: params[:sealed_volumn])
+    if params[:sealed_volume].present?
+      drivers = drivers.where(sealed_volume: params[:sealed_volume])
     end
 
     if params[:rms_power].present?
       drivers = drivers.where(rms_power: params[:rms_power])
     end
 
-    if params[:xmax].present?
-      drivers = drivers.where(sealed_f3: params[:xmax])
+    if params[:x_max].present?
+      drivers = drivers.where(x_max: params[:x_max])
     end
 
     # if params[:ranges].present?
