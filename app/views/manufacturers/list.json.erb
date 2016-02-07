@@ -1,0 +1,15 @@
+<%
+retval = { data: [], recordsFiltered: @drivers.total_entries, recordsTotal: @drivers.total_entries }
+@drivers.each do |driver|
+  retval[:data] << [
+    link_to(driver.model_no, manufacturer_path(driver.id)),
+    driver.sealed_f3,
+    driver.sealed_volume,
+    driver.high_frequency_limit,
+    driver.rms_power,
+    driver.x_max
+  ]
+end
+%>
+
+<%= retval.to_json %>
