@@ -40,5 +40,8 @@ end
 
 group :assets do
   gem 'sass-rails', '~> 5.0'
+  gem 'coffee-rails'
   gem 'uglifier'
+  gem 'jquery-datatables-rails'
+  gem 'jquery-ui-rails'
 end

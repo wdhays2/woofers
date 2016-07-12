@@ -1,4 +1,4 @@
-%table#woofers
+%table#woofers id="woofers" class="display" 
   %thead
     %th model_no
     %th sealed_f3
@@ -8,5 +8,5 @@
     %th x_max
   %tbody
 
-
-= javascript_tag("drivers_table(#{@manufacturers.to_json})")
+= data-source("<%= manufacturers_url(format: "json" %>")
+/ = javascript_tag("drivers_table(#{@manufacturers.to_json})")
